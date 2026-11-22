@@ -32,11 +32,11 @@
     <!-- Link to custom JavaScript file - as its a module we don't need defer -->
     <script type="module" src="./assets/js/script.js"></script>
   </head>
-  <body class="bg-1">
+  <body class="bg-body">
     <div
-      class="2xl:container bg-body min-vh-100 shadow-sm mx-auto d-flex flex-column"
+      class="2xl:container px-0 bg-body min-vh-100 shadow-sm mx-auto d-flex flex-column"
     >
-      <header class="container-fluid py-2">
+      <header class="container-fluid p-4 bg-1 ">
         <div class="row justify-content-between align-items-center">
           <h1 class="h2 col-auto">QUAYFORM</h1>
           <nav class="col-auto nav flex-nowrap d-none md:d-flex">
@@ -51,271 +51,316 @@
             >
           </nav>
           <button
-            class="col-auto btn btn-solid theme-primary w-7"
+            class="col-auto btn btn-solid theme-primary w-7 me-4"
             type="button"
           >
             Join Now
           </button>
         </div>
       </header>
-      <main class="container-fluid flex-grow-1">
-        <section>
-          <!-- Hero/Intro Section -->
-          <h2 class="h1">Pull Up or Reach Out</h2>
-          <p>
-            Have a question about student memberships, want to book a private
-            tour between lectures, or looking to host an NCI society event? Drop
-            us a line or swing by Mayor Square.
-          </p>
-          <div class="row row-cols-1 sm:row-cols-2 md:row-cols-4 g-5">
-            <div>
-              <div class="card theme-primary h-100 p-4">
-                <h3>Location</h3>
-                <p class="card-body">Unit 4, Mayor Square, D01</p>
-              </div>
-            </div>
-            <div>
-              <div class="card theme-accent h-100 p-4">
-                <h3>Email</h3>
-                <p class="card-body">hello@quayform.ie</p>
-              </div>
-            </div>
-            <div>
-              <div class="card theme-primary h-100 p-4">
-                <h3>Phone</h3>
-                <p class="card-body">+353 1 555 0194</p>
-              </div>
-            </div>
-            <div>
-              <div class="card theme-accent h-100 p-4">
-                <h3>Socials</h3>
-                <p class="card-body">@quayformdublin (IG & TikTok)</p>
+      <main class="flex-grow-1 space-y-8">
+        <section class="bg-1 position-relative overflow-hidden p-4 py-8">
+          <div class="container-fluid">
+            <!-- Hero/Intro Section -->
+            <img
+              src="./assets/images/gym-dumbell-area.jpg"
+              alt="A gym free weights area showing four benches in front of a weight rack full of dumbells and a large mirror"
+              class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover opacity-25"
+            />
+            <div class="position-relative z-1 py-6">
+              <h2 class="h1">Pull Up or Reach Out</h2>
+              <p>
+                Have a question about student memberships, want to book a
+                private tour between lectures, or looking to host an NCI society
+                event? Drop us a line or swing by Mayor Square.
+              </p>
+              <div class="row row-cols-1 md:row-cols-2 lg:row-cols-4 g-5">
+                <div>
+                  <div class="card theme-primary h-100 p-4">
+                    <h3>Location</h3>
+                    <p class="card-body">Unit 4, Mayor Square, D01</p>
+                  </div>
+                </div>
+                <div>
+                  <div class="card theme-accent h-100 p-4">
+                    <h3>Email</h3>
+                    <p class="card-body">hello@quayform.ie</p>
+                  </div>
+                </div>
+                <div>
+                  <div class="card theme-primary h-100 p-4">
+                    <h3>Phone</h3>
+                    <p class="card-body">+353 1 555 0194</p>
+                  </div>
+                </div>
+                <div>
+                  <div class="card theme-accent h-100 p-4">
+                    <h3>Socials</h3>
+                    <p class="card-body">@quayformdublin (IG & TikTok)</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </section>
-        <section>
-          <!-- Contact Form Section -->
-          <h2 class="h1">Book a Private Tour or Send an Inquiry</h2>
-          <form id="contactForm" novalidate>
-            <div class="row row-cols-1 md:row-cols-2 align-items-start">
+        <section class="bg-2 p-4">
+          <div class="container-fluid">
+            <!-- Contact Form Section -->
+            <h2 class="h1">Book a Private Tour or Send an Inquiry</h2>
+            <form id="contactForm" novalidate>
+              <div class="row row-cols-1 md:row-cols-2 align-items-start">
+                <div class="form-field mt-4">
+                  <label for="fieldFirstName" class="form-label"
+                    >First Name</label
+                  >
+                  <input
+                    type="text"
+                    name="firstname"
+                    class="form-control"
+                    id="fieldFirstName"
+                    placeholder="Conor"
+                    required
+                  />
+                  <div class="invalid-feedback" id="firstNameFeedback">
+                    Please enter your first name
+                  </div>
+                </div>
+                <div class="form-field mt-4">
+                  <label for="fieldLastName" class="form-label"
+                    >Last Name</label
+                  >
+                  <input
+                    type="text"
+                    name="lastname"
+                    class="form-control"
+                    id="fieldLastName"
+                    placeholder="Murphy"
+                    required
+                  />
+                  <div class="invalid-feedback" id="lastNameFeedback">
+                    Please enter your last name
+                  </div>
+                </div>
+                <div class="form-field mt-4">
+                  <label for="fieldEmail" class="form-label"
+                    >Email address</label
+                  >
+                  <input
+                    type="email"
+                    name="email"
+                    class="form-control"
+                    id="fieldEmail"
+                    placeholder="conor@student.ncirl.ie"
+                    required
+                  />
+                  <div class="invalid-feedback" id="emailFeedback">
+                    Please enter a valid email address
+                  </div>
+                </div>
+                <div class="form-field mt-4">
+                  <label for="fieldPhone" class="form-label">Phone</label>
+                  <input
+                    type="tel"
+                    name="phone"
+                    class="form-control"
+                    id="fieldPhone"
+                    placeholder="+353 1 555 0194"
+                  />
+                  <div class="invalid-feedback" id="phoneFeedback">
+                    Please enter a valid phone number
+                  </div>
+                </div>
+              </div>
               <div class="form-field mt-4">
-                <label for="fieldFirstName" class="form-label"
-                  >First Name</label
+                <label for="fieldTextarea" class="form-label"
+                  >Message / Preferred Tour Time</label
                 >
-                <input
-                  type="text"
-                  name="firstname"
+                <textarea
                   class="form-control"
-                  id="fieldFirstName"
-                  placeholder="Conor"
+                  name="message"
+                  id="fieldTextarea"
+                  rows="6"
                   required
-                />
-                <div class="invalid-feedback" id="firstNameFeedback">
-                  Please enter your first name
+                ></textarea>
+                <div class="invalid-feedback" id="messageFeedback">
+                  Please enter a message between 10 and 1000 characters
                 </div>
               </div>
-              <div class="form-field mt-4">
-                <label for="fieldLastName" class="form-label">Last Name</label>
-                <input
-                  type="text"
-                  name="lastname"
-                  class="form-control"
-                  id="fieldLastName"
-                  placeholder="Murphy"
-                  required
-                />
-                <div class="invalid-feedback" id="lastNameFeedback">
-                  Please enter your last name
-                </div>
-              </div>
-              <div class="form-field mt-4">
-                <label for="fieldEmail" class="form-label">Email address</label>
-                <input
-                  type="email"
-                  name="email"
-                  class="form-control"
-                  id="fieldEmail"
-                  placeholder="conor@student.ncirl.ie"
-                  required
-                />
-                <div class="invalid-feedback" id="emailFeedback">
-                  Please enter a valid email address
-                </div>
-              </div>
-              <div class="form-field mt-4">
-                <label for="fieldPhone" class="form-label">Phone</label>
-                <input
-                  type="tel"
-                  name="phone"
-                  class="form-control"
-                  id="fieldPhone"
-                  placeholder="+353 1 555 0194"
-                />
-                <div class="invalid-feedback" id="phoneFeedback">
-                  Please enter a valid phone number
-                </div>
-              </div>
-            </div>
-            <div class="form-field mt-4">
-              <label for="fieldTextarea" class="form-label"
-                >Message / Preferred Tour Time</label
+              <button
+                type="submit"
+                class="btn theme-primary btn-solid btn-styled mt-4"
               >
-              <textarea
-                class="form-control"
-                name="message"
-                id="fieldTextarea"
-                rows="6"
-                required
-              ></textarea>
-              <div class="invalid-feedback" id="messageFeedback">
-                Please enter a message between 10 and 1000 characters
-              </div>
-            </div>
-            <button
-              type="submit"
-              class="btn theme-primary btn-solid btn-styled mt-4"
-            >
-              Submit
-            </button>
-          </form>
-        </section>
-        <section class="row row-cols-1 md:row-cols-2 md:g-7">
-          <!-- Split Section Contact Details Opening Hours and Travel Guide -->
-          <div class="bg-2">
-            <h2>Headquarters</h2>
-            <p>
-              <span class="material-symbols-outlined me-4">home_pin</span>Unit
-              4, Mayor Square, North Wall, Dublin Docklands, D01Y300 (2 mins
-              from NCI)
-            </p>
-            <p>
-              <span class="material-symbols-outlined me-4">call</span>+353 (01)
-              555 0194
-            </p>
-            <p>
-              <span class="material-symbols-outlined me-4">alternate_email</span
-              >hello@quayform.ie
-            </p>
-            <h3>Opening Hours</h3>
-            <p>Mon - Fri: 06:00am - 11:00pm</p>
-            <p>Sat - Sun: 07:30am - 09:00pm</p>
-            <p>Bank Holidays: 08:00am - 06:00pm</p>
-          </div>
-          <div class="bg-2">
-            <h2>Travel Guide</h2>
-            <p>
-              <span class="material-symbols-outlined me-4">directions_walk</span
-              >Walk from NCI: 2 minutes. Exit the main Mayor Street entrance of
-              NCI, turn left toward the Liffey, and you'll spot our glass
-              storefront right next to Mayor Square.
-            </p>
-            <p>
-              <span class="material-symbols-outlined me-4">train</span>8-minute
-              walk from Connolly Station or 10 minutes across the Samuel Beckett
-              Bridge from Grand Canal Dock.
-            </p>
-            <p>
-              <span class="material-symbols-outlined me-4">tram</span>1-minute
-              walk from the Mayor Square - NCI stop.
-            </p>
-            <p>
-              <span class="material-symbols-outlined me-4">pedal_bike</span
-              >Secure indoor bike racks and e-scooter charging lockers available
-              free for members right inside the ground-floor lobby, plus a
-              DublinBikes station 50 metres away.
-            </p>
-            <p>
-              <span class="material-symbols-outlined me-4">directions_bus</span
-              >Served directly by routes G1, G2, 151, and 53 along North Wall
-              Quay and Sheriff Street.
-            </p>
+                Submit
+              </button>
+            </form>
           </div>
         </section>
         <section>
+          <div class="container-fluid">
+            <div class="row row-cols-1 md:row-cols-2 g-7">
+              <div>
+                <!-- Split Section Contact Details Opening Hours and Travel Guide -->
+                <div class="bg-2 p-8 h-100 rounded-4">
+                  <h2>Headquarters</h2>
+                  <p>
+                    <span class="material-symbols-outlined me-4 fg-info">home_pin</span
+                    >Unit 4, Mayor Square, North Wall, Dublin Docklands, D01Y300
+                    (2 mins from NCI)
+                  </p>
+                  <p>
+                    <span class="material-symbols-outlined me-4 fg-info">call</span>+353
+                    (01) 555 0194
+                  </p>
+                  <p>
+                    <span class="material-symbols-outlined me-4 fg-info"
+                      >alternate_email</span
+                    >hello@quayform.ie
+                  </p>
+                  <h3>Opening Hours</h3>
+                  <p>Mon - Fri: 06:00am - 11:00pm</p>
+                  <p>Sat - Sun: 07:30am - 09:00pm</p>
+                  <p>Bank Holidays: 08:00am - 06:00pm</p>
+                </div>
+              </div>
+              <div>
+                <div class="bg-2 p-8 h-100 rounded-4">
+                  <h2>Travel Guide</h2>
+                  <p>
+                    <span class="material-symbols-outlined me-4 fg-info"
+                      >directions_walk</span
+                    >Walk from NCI: 2 minutes. Exit the main Mayor Street
+                    entrance of NCI, turn left toward the Liffey, and you'll
+                    spot our glass storefront right next to Mayor Square.
+                  </p>
+                  <p>
+                    <span class="material-symbols-outlined me-4 fg-info">train</span
+                    >8-minute walk from Connolly Station or 10 minutes across
+                    the Samuel Beckett Bridge from Grand Canal Dock.
+                  </p>
+                  <p>
+                    <span class="material-symbols-outlined me-4 fg-info">tram</span
+                    >1-minute walk from the Mayor Square - NCI stop.
+                  </p>
+                  <p>
+                    <span class="material-symbols-outlined me-4 fg-info"
+                      >pedal_bike</span
+                    >Secure indoor bike racks and e-scooter charging lockers
+                    available free for members right inside the ground-floor
+                    lobby, plus a DublinBikes station 50 metres away.
+                  </p>
+                  <p>
+                    <span class="material-symbols-outlined me-4 fg-info"
+                      >directions_bus</span
+                    >Served directly by routes G1, G2, 151, and 53 along North
+                    Wall Quay and Sheriff Street.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="p-4 bg-2">
+          <div class="container-fluid">
             <h2>Frequently Asked Questions</h2>
-          <!-- FAQ Section -->
-          <div class="accordion theme-primary accordion-gap">
-            <details class="accordion-item" name="accordionExample" open>
-              <summary class="accordion-header">
-                <strong>Q:</strong> Can I buy a single day pass to try the gym out?
-                <svg
-                  class="accordion-icon"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="m2 5 6 6 6-6" />
-                </svg>
-              </summary>
-              <div class="accordion-body">
-                <strong>A:</strong> Yes! Student day passes are €12 (or €15 standard) and give you full access to the gym floor, changing rooms, and Fuel Bar. If you sign up for a monthly membership within 48 hours, we’ll take the day pass cost straight off your first month.
-              </div>
-            </details>
-            <details class="accordion-item" name="accordionExample">
-              <summary class="accordion-header">
-                <strong>Q:</strong> Do I need to bring my own padlock or towel?
-                <svg
-                  class="accordion-icon"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="m2 5 6 6 6-6" />
-                </svg>
-              </summary>
-              <div class="accordion-body">
-                <strong>A:</strong> No padlock needed—all lockers use built-in digital PIN codes. Sweat towels are complimentary for all members, and shower towels are free on the Pro & Recovery plan (or €2 to rent).
-              </div>
-            </details>
-            <details class="accordion-item" name="accordionExample">
-              <summary class="accordion-header">
-                <strong>Q:</strong> Is there parking nearby?
-                <svg
-                  class="accordion-icon"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="m2 5 6 6 6-6" />
-                </svg>
-              </summary>
-              <div class="accordion-body">
-                <strong>A:</strong> While most of our members walk, cycle, or take the Luas, paid underground parking is available 3 minutes away at the IFSC / National College of Ireland car park on Mayor Street.
-              </div>
-            </details>
-            <details class="accordion-item" name="accordionExample">
-              <summary class="accordion-header">
-                <strong>Q:</strong> How do I partner with QUAYFORM for an NCI society event?
-                <svg
-                  class="accordion-icon"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="m2 5 6 6 6-6" />
-                </svg>
-              </summary>
-              <div class="accordion-body">
-                <strong>A:</strong> Use the inquiry form above and mention your society name and rough headcount—we love hosting charity spinathons, run club collabs, and study-week wellness mornings.
-              </div>
-            </details>
+            <!-- FAQ Section -->
+            <div class="accordion theme-primary accordion-gap my-8">
+              <details class="accordion-item" name="accordionExample" open>
+                <summary class="accordion-header">
+                  <strong>Q:</strong> Can I buy a single day pass to try the gym
+                  out?
+                  <svg
+                    class="accordion-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="m2 5 6 6 6-6" />
+                  </svg>
+                </summary>
+                <div class="accordion-body">
+                  <strong>A:</strong> Yes! Student day passes are €12 (or €15
+                  standard) and give you full access to the gym floor, changing
+                  rooms, and Fuel Bar. If you sign up for a monthly membership
+                  within 48 hours, we’ll take the day pass cost straight off
+                  your first month.
+                </div>
+              </details>
+              <details class="accordion-item" name="accordionExample">
+                <summary class="accordion-header">
+                  <strong>Q:</strong> Do I need to bring my own padlock or
+                  towel?
+                  <svg
+                    class="accordion-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="m2 5 6 6 6-6" />
+                  </svg>
+                </summary>
+                <div class="accordion-body">
+                  <strong>A:</strong> No padlock needed—all lockers use built-in
+                  digital PIN codes. Sweat towels are complimentary for all
+                  members, and shower towels are free on the Pro & Recovery plan
+                  (or €2 to rent).
+                </div>
+              </details>
+              <details class="accordion-item" name="accordionExample">
+                <summary class="accordion-header">
+                  <strong>Q:</strong> Is there parking nearby?
+                  <svg
+                    class="accordion-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="m2 5 6 6 6-6" />
+                  </svg>
+                </summary>
+                <div class="accordion-body">
+                  <strong>A:</strong> While most of our members walk, cycle, or
+                  take the Luas, paid underground parking is available 3 minutes
+                  away at the IFSC / National College of Ireland car park on
+                  Mayor Street.
+                </div>
+              </details>
+              <details class="accordion-item" name="accordionExample">
+                <summary class="accordion-header">
+                  <strong>Q:</strong> How do I partner with QUAYFORM for an NCI
+                  society event?
+                  <svg
+                    class="accordion-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="m2 5 6 6 6-6" />
+                  </svg>
+                </summary>
+                <div class="accordion-body">
+                  <strong>A:</strong> Use the inquiry form above and mention
+                  your society name and rough headcount—we love hosting charity
+                  spinathons, run club collabs, and study-week wellness
+                  mornings.
+                </div>
+              </details>
+            </div>
           </div>
         </section>
       </main>
-      <footer class="container-fluid">
+      <footer class="container-fluid bg-1 mt-8 p-4">
         <div class="row mb-9 pb-9 md:mb-0 md:pb-0">
           <div class="col-12 md:col-4 lg:col-3">
             <h2 class="h3">Address</h2>
@@ -326,25 +371,25 @@
           </div>
           <div class="col-12 sm:col-6 md:col-4 lg:col-3">
             <h2 class="h3">Quick Links</h2>
-            <ul>
+            <ul class="list-unstyled">
               <li>
-                <span class="material-symbols-outlined">arrow_forward_ios</span>
+                <span class="material-symbols-outlined fg-primary">arrow_forward_ios</span>
                 <a href="./facilities.html">Facilities</a>
               </li>
               <li>
-                <span class="material-symbols-outlined">arrow_forward_ios</span>
+                <span class="material-symbols-outlined fg-primary">arrow_forward_ios</span>
                 <a href="#">Class Timetable</a>
               </li>
               <li>
-                <span class="material-symbols-outlined">arrow_forward_ios</span>
+                <span class="material-symbols-outlined fg-primary">arrow_forward_ios</span>
                 <a href="#">Student Membership</a>
               </li>
               <li>
-                <span class="material-symbols-outlined">arrow_forward_ios</span>
+                <span class="material-symbols-outlined fg-primary">arrow_forward_ios</span>
                 <a href="#">Book a Tour</a>
               </li>
               <li>
-                <span class="material-symbols-outlined">arrow_forward_ios</span>
+                <span class="material-symbols-outlined fg-primary">arrow_forward_ios</span>
                 <a href="#">Careers</a>
               </li>
             </ul>
@@ -374,7 +419,7 @@
                   We'll never share your email with anyone else.
                 </div>
               </div>
-              <button type="submit" class="btn btn-solid theme-primary mb-3">
+              <button type="submit" class="btn btn-solid theme-primary my-3">
                 Subscribe
               </button>
             </form>
