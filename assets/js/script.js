@@ -25,15 +25,41 @@ if (contactForm) {
         [message, messageFeedback, message.value.trim().length >= 10 && message.value.trim().length <= 1000]
     ]
 
+    let hasSubmitted = false;
+
     const applyValidation = (field, feedback, isValid) => {
         field.setCustomValidity(isValid ? '' : 'Invalid field');
         field.classList.toggle('is-invalid', !isValid);
+        field.classList.toggle('is-valid', isValid && field.value.trim() !== '');
     }
+
+    const validateOneField = (f) => {
+        for (const [field, feedback, isValid] of getValidations()) {
+            if (field === f) {
+                applyValidation(field, feedback, isValid);
+            }
+        }
+    }
+
+    // Add event listeners for individual field validation
+    [firstName, lastName, email, phone, message].forEach((field) => {
+        field.addEventListener('blur', () => {
+            if (hasSubmitted) {
+                validateOneField(field);
+            }
+        });
+        field.addEventListener('input', () => {
+            if (field.classList.contains('is-invalid') || field.classList.contains('is-valid')) {
+                validateOneField(field);
+            }
+        });
+    });
 
     // Add event listener for form submission
     contactForm.addEventListener('submit', (event) => {
         event.preventDefault();
         event.stopPropagation();
+        hasSubmitted = true;
 
         // validation
         let firstInvalidInput = null;
@@ -58,6 +84,7 @@ if (contactForm) {
             message: message.value.trim()
         });
         contactForm.reset();
+        hasSubmitted = false;
         [firstName, lastName, email, phone, message].forEach((field) => {
             field.setCustomValidity('');
             field.classList.remove('is-invalid', 'is-valid');
