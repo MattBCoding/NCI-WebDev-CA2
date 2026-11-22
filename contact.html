@@ -29,8 +29,8 @@
     />
     <!-- Link to custom CSS file -->
     <link rel="stylesheet" href="./assets/styles/style.css" />
-    <!-- Link to custom JavaScript file - defer means that it will be executed after the HTML is parsed -->
-    <script src="./assets/js/script.js" defer></script>
+    <!-- Link to custom JavaScript file - as its a module we don't need defer -->
+    <script type="module" src="./assets/js/script.js"></script>
   </head>
   <body class="bg-1">
     <div
@@ -99,56 +99,68 @@
           <h2 class="h1">Book a Private Tour or Send an Inquiry</h2>
           <form id="contactForm" novalidate>
             <div class="row row-cols-1 md:row-cols-2 align-items-start">
-            <div class="form-field mt-4">
-              <label for="fieldFirstName" class="form-label">First Name</label>
-              <input
-                type="text"
-                name="firstname"
-                class="form-control"
-                id="fieldFirstName"
-                placeholder="Conor"
-                required
-              />
-              <div class="invalid-feedback" id="firstNameFeedback">Please enter your first name</div>
+              <div class="form-field mt-4">
+                <label for="fieldFirstName" class="form-label"
+                  >First Name</label
+                >
+                <input
+                  type="text"
+                  name="firstname"
+                  class="form-control"
+                  id="fieldFirstName"
+                  placeholder="Conor"
+                  required
+                />
+                <div class="invalid-feedback" id="firstNameFeedback">
+                  Please enter your first name
+                </div>
+              </div>
+              <div class="form-field mt-4">
+                <label for="fieldLastName" class="form-label">Last Name</label>
+                <input
+                  type="text"
+                  name="lastname"
+                  class="form-control"
+                  id="fieldLastName"
+                  placeholder="Murphy"
+                  required
+                />
+                <div class="invalid-feedback" id="lastNameFeedback">
+                  Please enter your last name
+                </div>
+              </div>
+              <div class="form-field mt-4">
+                <label for="fieldEmail" class="form-label">Email address</label>
+                <input
+                  type="email"
+                  name="email"
+                  class="form-control"
+                  id="fieldEmail"
+                  placeholder="conor@student.ncirl.ie"
+                  required
+                />
+                <div class="invalid-feedback" id="emailFeedback">
+                  Please enter a valid email address
+                </div>
+              </div>
+              <div class="form-field mt-4">
+                <label for="fieldPhone" class="form-label">Phone</label>
+                <input
+                  type="tel"
+                  name="phone"
+                  class="form-control"
+                  id="fieldPhone"
+                  placeholder="+353 1 555 0194"
+                />
+                <div class="invalid-feedback" id="phoneFeedback">
+                  Please enter a valid phone number
+                </div>
+              </div>
             </div>
             <div class="form-field mt-4">
-              <label for="fieldLastName" class="form-label">Last Name</label>
-              <input
-                type="text"
-                name="lastname"
-                class="form-control"
-                id="fieldLastName"
-                placeholder="Murphy"
-                required
-              />
-              <div class="invalid-feedback" id="lastNameFeedback">Please enter your last name</div>
-            </div>
-            <div class="form-field mt-4">
-              <label for="fieldEmail" class="form-label">Email address</label>
-              <input
-                type="email"
-                name="email"
-                class="form-control"
-                id="fieldEmail"
-                placeholder="conor@student.ncirl.ie"
-                required
-              />
-              <div class="invalid-feedback" id="emailFeedback">Please enter a valid email address</div>
-            </div>
-            <div class="form-field mt-4">
-              <label for="fieldPhone" class="form-label">Phone</label>
-              <input
-                type="tel"
-                name="phone"
-                class="form-control"
-                id="fieldPhone"
-                placeholder="+353 1 555 0194"
-              />
-              <div class="invalid-feedback" id="phoneFeedback">Please enter a valid phone number</div>
-            </div>
-            </div>
-            <div class="form-field mt-4">
-              <label for="fieldTextarea" class="form-label">Message / Preferred Tour Time</label>
+              <label for="fieldTextarea" class="form-label"
+                >Message / Preferred Tour Time</label
+              >
               <textarea
                 class="form-control"
                 name="message"
@@ -156,31 +168,69 @@
                 rows="6"
                 required
               ></textarea>
-              <div class="invalid-feedback" id="messageFeedback">Please enter a message between 10 and 1000 characters</div>
+              <div class="invalid-feedback" id="messageFeedback">
+                Please enter a message between 10 and 1000 characters
+              </div>
             </div>
-            <button type="submit" class="btn theme-primary btn-solid btn-styled mt-4">Submit</button>
+            <button
+              type="submit"
+              class="btn theme-primary btn-solid btn-styled mt-4"
+            >
+              Submit
+            </button>
           </form>
         </section>
         <section class="row row-cols-1 md:row-cols-2 md:g-7">
           <!-- Split Section Contact Details Opening Hours and Travel Guide -->
-           <div class="bg-2">
+          <div class="bg-2">
             <h2>Headquarters</h2>
-            <p><span class="material-symbols-outlined me-4">home_pin</span>Unit 4, Mayor Square, North Wall, Dublin Docklands, D01Y300 (2 mins from NCI)</p>
-            <p><span class="material-symbols-outlined me-4">call</span>+353 (01) 555 0194</p>
-            <p><span class="material-symbols-outlined me-4">alternate_email</span>hello@quayform.ie</p>
+            <p>
+              <span class="material-symbols-outlined me-4">home_pin</span>Unit
+              4, Mayor Square, North Wall, Dublin Docklands, D01Y300 (2 mins
+              from NCI)
+            </p>
+            <p>
+              <span class="material-symbols-outlined me-4">call</span>+353 (01)
+              555 0194
+            </p>
+            <p>
+              <span class="material-symbols-outlined me-4">alternate_email</span
+              >hello@quayform.ie
+            </p>
             <h3>Opening Hours</h3>
             <p>Mon - Fri: 06:00am - 11:00pm</p>
             <p>Sat - Sun: 07:30am - 09:00pm</p>
             <p>Bank Holidays: 08:00am - 06:00pm</p>
-           </div>
-           <div class="bg-2">
+          </div>
+          <div class="bg-2">
             <h2>Travel Guide</h2>
-            <p><span class="material-symbols-outlined me-4">directions_walk</span>Walk from NCI: 2 minutes. Exit the main Mayor Street entrance of NCI, turn left toward the Liffey, and you'll spot our glass storefront right next to Mayor Square.</p>
-            <p><span class="material-symbols-outlined me-4">train</span>8-minute walk from Connolly Station or 10 minutes across the Samuel Beckett Bridge from Grand Canal Dock.</p>
-            <p><span class="material-symbols-outlined me-4">tram</span>1-minute walk from the Mayor Square - NCI stop.</p>
-            <p><span class="material-symbols-outlined me-4">pedal_bike</span>Secure indoor bike racks and e-scooter charging lockers available free for members right inside the ground-floor lobby, plus a DublinBikes station 50 metres away.</p>
-            <p><span class="material-symbols-outlined me-4">directions_bus</span>Served directly by routes G1, G2, 151, and 53 along North Wall Quay and Sheriff Street.</p>
-           </div>
+            <p>
+              <span class="material-symbols-outlined me-4">directions_walk</span
+              >Walk from NCI: 2 minutes. Exit the main Mayor Street entrance of
+              NCI, turn left toward the Liffey, and you'll spot our glass
+              storefront right next to Mayor Square.
+            </p>
+            <p>
+              <span class="material-symbols-outlined me-4">train</span>8-minute
+              walk from Connolly Station or 10 minutes across the Samuel Beckett
+              Bridge from Grand Canal Dock.
+            </p>
+            <p>
+              <span class="material-symbols-outlined me-4">tram</span>1-minute
+              walk from the Mayor Square - NCI stop.
+            </p>
+            <p>
+              <span class="material-symbols-outlined me-4">pedal_bike</span
+              >Secure indoor bike racks and e-scooter charging lockers available
+              free for members right inside the ground-floor lobby, plus a
+              DublinBikes station 50 metres away.
+            </p>
+            <p>
+              <span class="material-symbols-outlined me-4">directions_bus</span
+              >Served directly by routes G1, G2, 151, and 53 along North Wall
+              Quay and Sheriff Street.
+            </p>
+          </div>
         </section>
         <section>
           <!-- FAQ Section -->
@@ -274,6 +324,37 @@
           >
         </nav>
       </footer>
+      <!-- Confirmation dialog (shown by script.js after a valid submit) -->
+      <dialog class="dialog" id="confirmDialog">
+        <div class="dialog-header">
+          <h2 class="dialog-title h4" id="confirmDialogTitle">Message sent</h2>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="dialog"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="dialog-body text-center" id="confirmDialogBody">
+          <span class="material-symbols-outlined dialog-icon" aria-hidden="true"
+            >check_circle</span
+          >
+          <p class="mb-2">Thanks, <strong id="confirmName">there</strong>!</p>
+          <p class="mb-0">
+            We've received your message and will reply to
+            <strong id="confirmEmail">your email</strong> shortly.
+          </p>
+        </div>
+        <div class="dialog-footer">
+          <button
+            type="button"
+            class="btn btn-solid theme-primary"
+            data-bs-dismiss="dialog"
+          >
+            Close
+          </button>
+        </div>
+      </dialog>
       <noscript>
         <!-- we will put a message in here for users who have JavaScript disabled -->
         <!-- we need to style it for when it is visible -->

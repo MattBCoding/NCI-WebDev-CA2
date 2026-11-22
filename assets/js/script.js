@@ -1,10 +1,13 @@
 // Custom JavaScript file for the project
-
+// importing Bootstrap Dialog component
+import { Dialog } from "https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js";
 // Contact Form validation
 const contactForm = document.getElementById('contactForm');
+// Get the confirmation dialog element
+const confirmDialog = document.getElementById('confirmDialog');
 
-if (contactForm) {
-    console.log('got form element')
+if (contactForm && confirmDialog) {
+    console.log('got form element and dialog')
     // get elements
     const firstName = document.getElementById('fieldFirstName');
     const lastName = document.getElementById('fieldLastName');
@@ -16,6 +19,9 @@ if (contactForm) {
     const emailFeedback = document.getElementById('emailFeedback');
     const phoneFeedback = document.getElementById('phoneFeedback');
     const messageFeedback = document.getElementById('messageFeedback');
+    const dialogInstance = Dialog.getOrCreateInstance(confirmDialog);
+    const confirmName = document.getElementById('confirmName');
+    const confirmEmail = document.getElementById('confirmEmail');
 
     const getValidations = () => [
         [firstName, firstNameFeedback, firstName.value.trim().length >= 2 && firstName.value.trim().length <= 50],
@@ -83,7 +89,11 @@ if (contactForm) {
             phone: phone.value.trim(),
             message: message.value.trim()
         });
+        confirmName.textContent = firstName.value.trim();
+        confirmEmail.textContent = email.value.trim();
+        dialogInstance.show();
         contactForm.reset();
+
         hasSubmitted = false;
         [firstName, lastName, email, phone, message].forEach((field) => {
             field.setCustomValidity('');
