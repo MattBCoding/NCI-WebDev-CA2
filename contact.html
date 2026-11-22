@@ -97,49 +97,68 @@
         <section>
           <!-- Contact Form Section -->
           <h2 class="h1">Book a Private Tour or Send an Inquiry</h2>
-          <form action="">
+          <form action="" id="contactForm">
+            <div class="row row-cols-1 md:row-cols-2">
             <div class="form-field mt-4">
               <label for="fieldFirstName" class="form-label">First Name</label>
               <input
                 type="text"
+                name="firstname"
                 class="form-control"
                 id="fieldFirstName"
                 placeholder="Conor"
+                required
+                minlength="2"
+                maxlength="50"
               />
             </div>
             <div class="form-field mt-4">
               <label for="fieldLastName" class="form-label">Last Name</label>
               <input
                 type="text"
+                name="lastname"
                 class="form-control"
                 id="fieldLastName"
                 placeholder="Murphy"
+                required
+                minlength="2"
+                maxlength="50"
               />
             </div>
             <div class="form-field mt-4">
               <label for="fieldEmail" class="form-label">Email address</label>
               <input
                 type="email"
+                name="email"
                 class="form-control"
                 id="fieldEmail"
                 placeholder="conor@student.ncirl.ie"
+                required
+                pattern="[^\s@]+@[^\s@.]+(\.[^\s@.]+)*\.[^\s@.]{2,}"
               />
             </div>
             <div class="form-field mt-4">
               <label for="fieldPhone" class="form-label">Phone</label>
               <input
-                type="text"
+                type="tel"
+                name="phone"
                 class="form-control"
                 id="fieldPhone"
                 placeholder="+353 1 555 0194"
+                pattern="\+?[0-9 ]{7-15}"
               />
+            </div>
             </div>
             <div class="form-field mt-4">
               <label for="fieldTextarea" class="form-label">Message / Preferred Tour Time</label>
               <textarea
                 class="form-control"
+                name="message"
                 id="fieldTextarea"
                 rows="6"
+                required
+                minlength="10"
+                maxlength="1000"
               ></textarea>
             </div>
             <button type="submit" class="btn theme-primary btn-solid btn-styled mt-4">Submit</button>
