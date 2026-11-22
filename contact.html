@@ -32,100 +32,116 @@
     <!-- Link to custom JavaScript file - defer means that it will be executed after the HTML is parsed -->
     <script src="./assets/js/script.js" defer></script>
   </head>
-  <body>
-    <header>
-      <h1>QUAYFORM</h1>
-      <nav class="nav">
-        <a class="nav-link" href="./index.html">Home</a>
-        <a class="nav-link" href="./facilities.html">Facilities</a>
-        <a class="nav-link" href="./membership.html">Membership</a>
-        <a class="nav-link active" aria-current="page" href="./contact.html"
-          >Contact</a
-        >
-      </nav>
-      <button class="btn btn-primary" type="button">Join Now</button>
-    </header>
-    <main>
-        <section>
-            <!-- Hero/Intro Section -->
-        </section>
-        <section>
-            <!-- Contact Form Section -->
-        </section>
-        <section>
-            <!-- Split Section Contact Details Opening Hours and Travel Guide -->
-        </section>
-        <section>
-            <!-- FAQ Section -->
-        </section>
-    </main>
-    <footer>
-      <div>
-        <h2>Address</h2>
-        <p>
-          Unit 4, Mayor Square, North Wall, Dublin Docklands, D01Y300 (2 mins
-          from NCI)
-        </p>
-      </div>
-      <div>
-        <h2>Quick Links</h2>
-        <ul>
-          <li>
-            <span class="material-symbols-outlined">arrow_forward_ios</span>
-            <a href="./facilities.html">Facilities</a>
-          </li>
-          <li>
-            <span class="material-symbols-outlined">arrow_forward_ios</span>
-            <a href="#">Class Timetable</a>
-          </li>
-          <li>
-            <span class="material-symbols-outlined">arrow_forward_ios</span>
-            <a href="#">Student Membership</a>
-          </li>
-          <li>
-            <span class="material-symbols-outlined">arrow_forward_ios</span>
-            <a href="#">Book a Tour</a>
-          </li>
-          <li>
-            <span class="material-symbols-outlined">arrow_forward_ios</span>
-            <a href="#">Careers</a>
-          </li>
-        </ul>
-      </div>
-      <div>
-        <h2>Opening Hours</h2>
-        <p>Mon - Fri: 06:00am - 11:00pm</p>
-        <p>Sat - Sun: 07:30am - 09:00pm</p>
-        <p>Bank Holidays: 08:00am - 06:00pm</p>
-      </div>
-      <div>
-        <h2>Newsletter Sign Up</h2>
-        <p>
-          "Get the Drop" - Weekly class drops, student pop-ups, and Docklands
-          run club invites.
-        </p>
-        <form>
-          <div class="form-field">
-            <label for="fieldText" class="form-label">Email address</label>
-            <input
-              type="email"
-              class="form-control"
-              id="fieldText"
-              placeholder="name@example.com"
-            />
-            <div class="form-text">
-              We'll never share your email with anyone else.
-            </div>
-          </div>
-          <button type="submit" class="btn-solid theme-primary mb-3">
-            Subscribe
+  <body class="bg-1">
+    <div class="2xl:container bg-body min-vh-100 shadow-sm mx-auto d-flex flex-column">
+      <header class="container-fluid">
+        <div class="row justify-content-between align-items-center">
+          <h1 class="col-auto">QUAYFORM</h1>
+          <nav class="col-auto nav flex-no-wrap d-none md:d-flex">
+            <a class="nav-link" href="./index.html">Home</a>
+            <a class="nav-link" href="./facilities.html">Facilities</a>
+            <a class="nav-link" href="./membership.html">Membership</a>
+            <a class="nav-link active theme-primary" aria-current="page" href="./contact.html"
+              >Contact</a
+            >
+          </nav>
+          <button class="col-auto btn btn-solid theme-primary w-7" type="button">
+            Join Now
           </button>
-        </form>
-      </div>
-    </footer>
-    <noscript>
-      <!-- we will put a message in here for users who have JavaScript disabled -->
-      <!-- we need to style it for when it is visible -->
-    </noscript>
+        </div>
+      </header>
+      <main class="container-fluid flex-grow-1">
+        <section>
+          <!-- Hero/Intro Section -->
+        </section>
+        <section>
+          <!-- Contact Form Section -->
+        </section>
+        <section>
+          <!-- Split Section Contact Details Opening Hours and Travel Guide -->
+        </section>
+        <section>
+          <!-- FAQ Section -->
+        </section>
+      </main>
+      <footer class="container-fluid">
+        <div class="row mb-9 pb-9 md:mb-0 md:pb-0">
+
+            <div class="col-12 md:col-4 lg:col-3">
+              <h2 class="h3">Address</h2>
+              <p>
+                Unit 4, Mayor Square, North Wall, Dublin Docklands, D01Y300 (2 mins
+                from NCI)
+              </p>
+            </div>
+            <div class="col-12 sm:col-6 md:col-4 lg:col-3">
+              <h2 class="h3">Quick Links</h2>
+              <ul>
+                <li>
+                  <span class="material-symbols-outlined">arrow_forward_ios</span>
+                  <a href="./facilities.html">Facilities</a>
+                </li>
+                <li>
+                  <span class="material-symbols-outlined">arrow_forward_ios</span>
+                  <a href="#">Class Timetable</a>
+                </li>
+                <li>
+                  <span class="material-symbols-outlined">arrow_forward_ios</span>
+                  <a href="#">Student Membership</a>
+                </li>
+                <li>
+                  <span class="material-symbols-outlined">arrow_forward_ios</span>
+                  <a href="#">Book a Tour</a>
+                </li>
+                <li>
+                  <span class="material-symbols-outlined">arrow_forward_ios</span>
+                  <a href="#">Careers</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-12 sm:col-6 md:col-4 lg:col-3">
+              <h2 class="h3">Opening Hours</h2>
+              <p>Mon - Fri: 06:00am - 11:00pm</p>
+              <p>Sat - Sun: 07:30am - 09:00pm</p>
+              <p>Bank Holidays: 08:00am - 06:00pm</p>
+            </div>
+            <div class="col-12 lg:col-3">
+              <h2 class="h3">Newsletter Sign Up</h2>
+              <p>
+                "Get the Drop" - Weekly class drops, student pop-ups, and Docklands
+                run club invites.
+              </p>
+              <form>
+                <div class="form-field">
+                  <label for="fieldText" class="form-label">Email address</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="fieldText"
+                    placeholder="name@example.com"
+                  />
+                  <div class="form-text">
+                    We'll never share your email with anyone else.
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-solid theme-primary mb-3">
+                  Subscribe
+                </button>
+              </form>
+            </div>
+        </div>
+        <!-- Mobile Navigation Menu -->
+        <nav class="nav nav-fill flex-nowrap fixed-bottom md:d-none bg-body border-top">
+          <a class="nav-link d-flex flex-column gap-0" href="./index.html"><span class="material-symbols-outlined">home</span>Home</a>
+          <a class="nav-link d-flex flex-column gap-0" href="./facilities.html"><span class="material-symbols-outlined">fitness_center</span>Facilities</a>
+          <a class="nav-link d-flex flex-column gap-0" href="./membership.html"><span class="material-symbols-outlined">groups</span>Membership</a>
+          <a class="nav-link d-flex flex-column gap-0 active theme-primary" aria-current="page" href="./contact.html"><span class="material-symbols-outlined">contact_mail</span>Contact</a>
+        </nav>
+      </footer>
+      <noscript>
+        <!-- we will put a message in here for users who have JavaScript disabled -->
+        <!-- we need to style it for when it is visible -->
+      </noscript>
+    </div>
   </body>
 </html>
