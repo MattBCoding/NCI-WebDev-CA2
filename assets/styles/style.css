@@ -1,11 +1,4 @@
 /* Basic CSS reset */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
 
 html,
 body {
@@ -29,3 +22,9 @@ select {
   font: inherit;
 }
 /* End of Basic CSS reset */
+
+/* Mobile Navigation Menu */
+/* required to override bootstrap default nav link padding so mobile nav doesn't wrap or overflow between 380px and 350px */
+.nav.fixed-bottom {
+  --bs-nav-link-padding-x: 0.25rem; 
+}
