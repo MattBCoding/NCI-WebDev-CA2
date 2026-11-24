@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Meta tags for SEO - need to fill in later -->
-    <meta name="description" content="Description of the webpage" />
-    <meta name="keywords" content="" />
-    <title>Document</title>
+    <meta name="description" content="Description of the webpage">
+    <meta name="keywords" content="">
+    <title>Facilities</title>
     <!-- Link to favicon files -->
 
     <!-- Link to Bootstrap files -->
@@ -28,134 +28,170 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
     />
     <!-- Link to custom CSS file -->
-    <link rel="stylesheet" href="./assets/styles/style.css" />
-    <!-- Link to custom JavaScript file - as its a module we don't need defer -->
-    <script type="module" src="./assets/js/script.js"></script>
-  </head>
-  <body class="bg-body">
-    <div
-      class="2xl:container px-0 bg-body min-vh-100 shadow-sm mx-auto d-flex flex-column"
-    >
-      <header class="container-fluid p-4 bg-1">
-        <div class="row justify-content-between align-items-center">
-          <h1 class="h2 col-auto fg-primary">QUAYFORM</h1>
-          <nav class="col-auto nav flex-nowrap d-none md:d-flex">
-            <a
-              class="nav-link"
-              href="./index.html"
-              >Home</a
-            >
-            <a class="nav-link active theme-primary"
-              aria-current="page" href="./facilities.html">Facilities</a>
-            <a class="nav-link" href="./membership.html">Membership</a>
-            <a class="nav-link" href="./contact.html">Contact</a>
-          </nav>
-          <button
-            class="col-auto btn btn-solid theme-primary w-7 me-4"
-            type="button"
-          >
-            Join Now
-          </button>
-        </div>
-      </header>
-      <main class="flex-grow-1 space-y-8"></main>
-      <footer class="container-fluid bg-1 mt-8 p-4">
-        <div class="row mb-9 pb-9 md:mb-0 md:pb-0">
-          <div class="col-12 md:col-4 lg:col-3">
-            <h2 class="h3">Address</h2>
-            <p>
-              Unit 4, Mayor Square, North Wall, Dublin Docklands, D01Y300 (2
-              mins from NCI)
-            </p>
-            <hr class="w-75 mx-auto md:d-none" />
-          </div>
-          <div class="col-12 sm:col-6 md:col-4 lg:col-3">
-            <h2 class="h3">Quick Links</h2>
-            <ul class="list-unstyled">
-              <li>
-                <span class="material-symbols-outlined fg-primary"
-                  >arrow_forward_ios</span
-                >
-                <a href="./facilities.html">Facilities</a>
-              </li>
-              <li>
-                <span class="material-symbols-outlined fg-primary"
-                  >arrow_forward_ios</span
-                >
-                <a href="#">Class Timetable</a>
-              </li>
-              <li>
-                <span class="material-symbols-outlined fg-primary"
-                  >arrow_forward_ios</span
-                >
-                <a href="#">Student Membership</a>
-              </li>
-              <li>
-                <span class="material-symbols-outlined fg-primary"
-                  >arrow_forward_ios</span
-                >
-                <a href="#">Book a Tour</a>
-              </li>
-            </ul>
-            <hr class="w-75 mx-auto sm:d-none" />
-          </div>
-          <div class="col-12 sm:col-6 md:col-4 lg:col-3">
-            <h2 class="h3">Opening Hours</h2>
-            <p>Mon - Fri: 06:00am - 11:00pm</p>
-            <p>Sat - Sun: 07:30am - 09:00pm</p>
-            <p>Bank Holidays: 08:00am - 06:00pm</p>
-          </div>
-          <div class="col-12 lg:col-3">
-            <hr class="w-75 mx-auto lg:d-none" />
-            <h2 class="h3">Newsletter Sign Up</h2>
-            <p>
-              "Get the Drop" - Weekly class drops, student pop-ups, and
-              Docklands run club invites.
-            </p>
-            <form>
-              <div class="form-field">
-                <label for="fieldText" class="form-label">Email address</label>
-                <input
-                  type="email"
-                  class="form-control"
-                  id="fieldText"
-                  placeholder="name@example.com"
-                />
-                <div class="form-text">
-                  We'll never share your email with anyone else.
-                </div>
-              </div>
-              <button type="submit" class="btn btn-solid theme-primary my-3">
-                Subscribe
-              </button>
-            </form>
-          </div>
-        </div>
-        <!-- Mobile Navigation Menu -->
-        <nav
-          class="nav nav-fill flex-nowrap fixed-bottom md:d-none bg-body border-top"
-        >
-          <a
-            class="nav-link d-flex flex-column gap-0"
-            href="./index.html"
-            ><span class="material-symbols-outlined">home</span>Home</a
-          >
-          <a class="nav-link d-flex flex-column gap-0 active theme-primary"
-            aria-current="page" href="./facilities.html"
-            ><span class="material-symbols-outlined">fitness_center</span
-            >Facilities</a
-          >
-          <a class="nav-link d-flex flex-column gap-0" href="./membership.html"
-            ><span class="material-symbols-outlined">groups</span>Membership</a
-          >
-          <a class="nav-link d-flex flex-column gap-0" href="./contact.html"
-            ><span class="material-symbols-outlined">contact_mail</span
-            >Contact</a
-          >
-        </nav>
-      </footer>
+    <link rel="stylesheet" href="./assets/styles/facilities.css">
+    <!-- Link to custom JavaScript file - defer means that it will be executed after the HTML is parsed -->
+    <script src="./assets/js/script.js" defer></script>
 
-      <noscript>
+</head>
+
+<!-- This is the body for the Gym Website-->
+<body>
+<!-- This is the main element of the Gym Website -->
+    <main>
+        <!-- First section of the webpage - displays the facilities as a title -->
+    <section id="title" class="py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <h1>Facilities</h1>
+            <p>Welcome to the website of our gym. Please be assured that we have the best facilities in the area.</p>
+          </div>
+          <div class="col-12 col-md-6">
+         <div class="image-slot"><img src="facilities.jpg" alt="Facilities" class="img-fluid"></div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="row g-3">
+              <div class="col-6"><a href="#" class="btn btn-outline-secondary w-100">Key Information<br><small>Zone 1</small></a></div>
+              <div class="col-6"><a href="#" class="btn btn-outline-secondary w-100">Key Information<br><small>Zone 2</small></a></div>
+              <div class="col-6"><a href="#" class="btn btn-outline-secondary w-100">Key Information<br><small>Zone 3</small></a></div>
+              <div class="col-6"><a href="#" class="btn btn-outline-secondary w-100">Key Information<br><small>Zone 4</small></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+     <!-- Second section of the webpage - displays Gym as a title -->
+    <section id="gym" class="py-5">
+        <div class="container">
+        <div class="text-center text-md-start">
+         <h2>Gym</h2>
+         <h3>Weights and Machines</h3>
+         </div>
+        <div class="row">
+          <div class="col-12 col-md-6 order-md-2">
+            <p>The gym has an array of equipment that users can choose from.</p>
+            <p>There is a free weight section that has different shapes and sizes.</p>
+            <p>There are machines for each muscle group with a guide to assist new users.</p>
+          </div>
+          <div class="col-12 col-md-6 order-md-1">
+            <div class="image-slot"><img src="gym.jpg" alt="Gym" class="img-fluid"></div>
+          </div>
+          <div class="col-12 col-md-6 offset-md-6 order-md-3">
+            <h4>Overview</h4>
+            <p>The gym, weights and machines are all free to use.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Third section of the webpage - displays the Studio as a title -->
+    <section id="studio" class="py-5">
+        <div class="container">
+            <div class="text-center text-md-start">
+             <h2>Studio</h2>
+            <h3>Classes</h3>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <p>The studio is free for all members to use.</p>
+                    <p>There are a variety of classes available for all members.</p>
+                    <p>Please contact us if there are any questions regarding the studio or classes.</p>
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <div class="image-slot"><img src="studio.jpg" alt="Studio" class="img-fluid"></div>
+                </div>
+
+                 <div class="col-12 col-md-6">
+                        <h4>Overview</h4>
+                        <p>The studio is a large area that can cater for large classes.</p>
+                </div>
+            </div>
+         </div>
+    </section>
+     <!-- Fourth section of the webpage - displays the Pool as a title -->
+    <section id="pool" class="py-5">
+      <div class="container">
+        <div class="text-center text-md-start">
+          <h2>Pool</h2>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-6 order-md-2">
+            <p>Our pool is 25 meters in length.</p>
+            <p>We have a full time lifeguard at their station during opening hours.</p>
+            <p>Adult and children classes are available.</p>
+          </div>
+          <div class="col-12 col-md-6 order-md-1">
+            <div class="image-slot"><img src="pool.jpg" alt="Pool" class="img-fluid"></div>
+          </div>
+          <div class="col-12 col-md-6 offset-md-6 order-md-3">
+            <h4>Overview</h4>
+            <p>Our pool is heated throughout the year.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+     <!-- Fifth section of the webpage - displays the Spa as a title -->
+    <section id="spa" class="py-5">
+        <div class="container">
+            <div class="text-center text-md-start">
+            <h2>Spa</h2>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6"> 
+                    <p></p>
+                    <p></p>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="image-slot"><img src="spa.jpg" alt="Spa" class="img-fluid"></div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <h4>Overview</h4>
+                    <p> Our Spa has a sauna, steam room and cold plung.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+     <!-- Sixth section of the webpage - displays the Locker Room as a title -->
+    <section id="locker-room" class="py-5">
+        <div class="container">
+            <div class="text-center text-md-start">
+            <h2>Locker Room</h2>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6 order-md-2">
+                    <p>Overview</p>
+                    <p>The locker room is available for all members with a unique lock system.</p>
+                </div>
+                <div class="col-12 col-md-6 order-md-1">
+                    <div class="image-slot"><img src="lockerroom.jpg" alt="Locker-Room" class="img-fluid"></div>
+                </div>
+                <div class="col-12 col-md-6 offset-md-6 order-md-3">
+                    <h4>Overview</h4>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Area at the bottom of the webpage - gives users an interaction capability to request a tour-->
+    <section id="request-tour" class="py-5">
+        <div class="container">
+            <h2 class="text-center">Request a tour</h2>
+            <p></p>
+            <p></p>
+            <div>
+                <div class="text-center">
+                    <a href="#" class="btn btn-outline-dark">Request Tour</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    </main>
+
+<script src=""></script>
+
+    <noscript>
         <!-- we will put a message in here for users who have JavaScript disabled -->
         <!-- we need to style it for when it is visible -->
       </noscript>

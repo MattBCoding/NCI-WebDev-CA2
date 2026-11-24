@@ -1,0 +1,53 @@
+/* There is a space above and below each section which has been created */
+section {
+  padding: 2.5rem 0;
+}
+
+/* Headings for h2, h3 and h4 */
+section h2 {
+  margin-bottom: 0.25rem;
+}
+
+section h3 {
+  margin-bottom: 1.5rem;
+}
+
+section h4 {
+  margin-top: 1rem;
+}
+
+/* Image boxes for the various sections: a fixed shape so the box shows */
+.image-slot {
+  aspect-ratio: 4 / 3;
+  border: 1px solid currentColor;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+}
+
+.image-slot img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#title .image-slot {
+  aspect-ratio: 16 / 9;
+}
+
+/* Boxes that are created for the fixed links */
+#title .btn {
+  padding: 1.25rem 0.5rem;
+}
+
+/* The request tour element with the wide and margins set */
+#request-tour p {
+  max-width: 50rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#request-tour .btn {
+  margin-top: 1.5rem;
+  padding: 0.5rem 2rem;
+}
