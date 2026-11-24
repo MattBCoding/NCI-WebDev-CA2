@@ -53,3 +53,16 @@
 .nav.fixed-bottom {
   --bs-nav-link-padding-x: 0.25rem; 
 }
+
+/* Contact Page custom styles */
+.form-field:has(:required) > .form-label::after {
+  content: " *" / "";
+  color: var(--bs-warning-fg);
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+  .contact-submit-btn {
+    width: 250px;
+  }
+}
