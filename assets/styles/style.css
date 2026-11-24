@@ -1,31 +1,68 @@
-/* Basic CSS reset */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+/* Basic custom colour overrides for Bootstrap 6. 
+   Reset not needed as included in Bootstrap */
+:root,
+:host {
+  color-scheme: light dark;
+
+  /* 1. Surfaces */
+  --bs-bg-body: light-dark(#ffffff, #192028);
+  --bs-bg-1: light-dark(#f6f8fa, #151c24);
+  --bs-bg-2: light-dark(#eef2f6, #242b32);
+
+  /* 2. Text and borders */
+  --bs-fg-body: light-dark(#0d141b, #e6edf3);
+  --bs-fg-2: light-dark(#475569, #9ba7b4);
+  --bs-border-color: light-dark(#cbd5e1, #2e353d);
+
+  /* 3. Primary (deep teal in light mode, softened cyan in dark mode) */
+  --bs-primary-base: light-dark(#006874, #38d9e6);
+  /* text / links */
+  --bs-primary-fg: light-dark(#006874, #38d9e6);
+  --bs-primary-fg-emphasis: light-dark(#004f58, #7ce7f0);
+  /* solid button fill */
+  --bs-primary-bg: var(--bs-primary-base);                   
+  --bs-primary-bg-subtle: light-dark(#d8f3f6, #0d2c32);
+  --bs-primary-bg-muted: light-dark(#bfe9ee, #11404a);
+  --bs-primary-border: light-dark(#99dce3, #17525c);
+  --bs-primary-focus-ring: color-mix(in oklch, var(--bs-primary-base) 55%, var(--bs-bg-body));
+  --bs-primary-contrast: light-dark(#ffffff, #0d141b);
+
+  /* 4. Accent */
+  --bs-accent-base: light-dark(#4c6600, #b5e026);
+  --bs-accent-fg: light-dark(#4c6600, #b5e026);
+  --bs-accent-fg-emphasis: light-dark(#364900, #c4e84d);
+  --bs-accent-bg: var(--bs-accent-base);
+  --bs-accent-border: light-dark(#a9c75a, #4c6600);
+  --bs-accent-contrast: light-dark(#ffffff, #0d141b);
+
+  /* 5. Warning */
+  --bs-warning-base: light-dark(#b83b00, #ff7a29);
+  --bs-warning-fg: light-dark(#b83b00, #ff7a29);
+  --bs-warning-bg: var(--bs-warning-base);
+  --bs-warning-contrast: light-dark(#ffffff, #0d141b);
+
+  /* 6. Success */
+  --bs-success-base: light-dark(#137333, #22c55e);
+  --bs-success-fg: light-dark(#137333, #22c55e);
+  --bs-success-bg: var(--bs-success-base);
+  --bs-success-contrast: light-dark(#ffffff, #0d141b);
 }
 
-html,
-body {
-  width: 100%;
-  min-height: 100%;
+/* Mobile Navigation Menu */
+/* required to override bootstrap default nav link padding so mobile nav doesn't wrap or overflow between 380px and 350px */
+.nav.fixed-bottom {
+  --bs-nav-link-padding-x: 0.25rem; 
 }
 
-img,
-picture,
-video,
-canvas,
-svg {
-  display: block;
-  max-width: 100%;
+/* Contact Page custom styles */
+.form-field:has(:required) > .form-label::after {
+  content: " *" / "";
+  color: var(--bs-warning-fg);
 }
 
-input,
-button,
-textarea,
-select {
-  font: inherit;
+/* Media Queries */
+@media (min-width: 768px) {
+  .contact-submit-btn {
+    width: 250px;
+  }
 }
-/* End of Basic CSS reset */
