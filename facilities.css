@@ -1,6 +1,10 @@
 /* There is a space above and below each section which has been created */
 section {
   padding: 2.5rem 0;
+  margin: 0 0.75rem 1rem 0.75rem;     /* keeps the box off the screen edges, gap between sections */
+  border: 2px solid #1e5aa8;          /* blue border */
+  border-radius: 12px;                /* rounded corners */
+  box-shadow: 0 2px 6px rgba(30, 90, 168, 0.2);   /* soft blue shadow */
 }
 
 /* Headings for h2, h3 and h4 */
@@ -19,6 +23,7 @@ section h4 {
 /* Image boxes for the various sections: a fixed shape so the box shows */
 .image-slot {
   aspect-ratio: 4 / 3;
+  max-height: 420px;
   border: 1px solid currentColor;
   margin-bottom: 1.5rem;
   overflow: hidden;
@@ -33,11 +38,16 @@ section h4 {
 
 #title .image-slot {
   aspect-ratio: 16 / 9;
+  max-height: 360px;
 }
 
 /* Boxes that are created for the fixed links */
 #title .btn {
   padding: 1.25rem 0.5rem;
+}
+
+#request-tour {
+  text-align: center;
 }
 
 /* The request tour element with the wide and margins set */
