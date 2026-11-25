@@ -1,4 +1,3 @@
-/* There is a space above and below each section which has been created */
 section {
   padding: 2.5rem 0;
 }
@@ -18,7 +17,8 @@ section h4 {
 
 /* Image boxes for the various sections: a fixed shape so the box shows */
 .image-slot {
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 3 / 2;
+  max-height: 320px;
   border: 1px solid currentColor;
   margin-bottom: 1.5rem;
   overflow: hidden;
@@ -31,16 +31,204 @@ section h4 {
   object-fit: cover;
 }
 
-#title .image-slot {
-  aspect-ratio: 16 / 9;
+/* ==========================================================
+   TITLE (Facilities): an opening for the visitor, no border
+   ========================================================== */
+#title {
+  padding: 3.5rem 0 2rem 0;
+  text-align: center;
 }
 
-/* Boxes that are created for the fixed links */
+#title h1 {
+  margin-bottom: 0.75rem;
+  font-size: 3rem;
+}
+
+#title p {
+  max-width: 40rem;
+  margin: 0 auto 2rem auto;
+  font-size: 1.25rem;
+}
+
+#title .image-slot {
+    aspect-ratio: 16 / 9;
+  max-width: 640px;            /* narrower than the page, so there is room to centre it */
+  max-height: 360px;
+  margin: 0 auto 1.5rem auto;  /* auto on the left and right centres the box */
+  border: 0;
+  border-radius: 12px;
+}
+
 #title .btn {
   padding: 1.25rem 0.5rem;
 }
 
-/* The request tour element with the wide and margins set */
+/* ==========================================================
+   GYM: image on the left, text on the right
+   ========================================================== */
+#gym {
+  margin: 0 0 1.25rem 0;
+  padding: 1rem 0;
+  background-color: #eef2f6;     /* blue section background */
+  border: 1px solid #333333;     /* thin dark edge, square corners */
+}
+
+#gym .container {
+  max-width: none;               /* use the full width of the section */
+}
+
+@media (min-width: 768px) {
+  #gym .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+    align-items: start;
+  }
+
+  #gym .row { display: contents; }
+  #gym .row > * { width: auto; max-width: none; margin: 0; padding: 0; }
+
+  #gym .container > :first-child { grid-column: 1; grid-row: 1; }          /* heading */
+  #gym .row > :nth-child(2)      { grid-column: 1; grid-row: 2 / span 2; } /* image */
+  #gym .row > :nth-child(1)      { grid-column: 2; grid-row: 2; }          /* text */
+  #gym .row > :nth-child(3)      { grid-column: 2; grid-row: 3; }          /* overview */
+}
+
+/* ==========================================================
+   STUDIO: text on the left, image on the right
+   ========================================================== */
+#studio {
+  margin: 0 0 1.25rem 0;
+  padding: 1rem 0;
+  background-color: #eef2f6;
+  border: 1px solid #333333;
+}
+
+#studio .container {
+  max-width: none;
+}
+
+@media (min-width: 768px) {
+  #studio .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+    align-items: start;
+  }
+
+  #studio .row { display: contents; }
+  #studio .row > * { width: auto; max-width: none; margin: 0; padding: 0; }
+
+  #studio .container > :first-child { grid-column: 1; grid-row: 1; }          /* heading */
+  #studio .row > :nth-child(1)      { grid-column: 1; grid-row: 2; }          /* text */
+  #studio .row > :nth-child(3)      { grid-column: 1; grid-row: 3; }          /* overview */
+  #studio .row > :nth-child(2)      { grid-column: 2; grid-row: 1 / span 3; } /* image */
+}
+
+/* ==========================================================
+   POOL: same as the gym (image left, text right)
+   ========================================================== */
+#pool {
+  margin: 0 0 1.25rem 0;
+  padding: 1rem 0;
+  background-color: #eef2f6;
+  border: 1px solid #333333;
+}
+
+#pool .container {
+  max-width: none;
+}
+
+@media (min-width: 768px) {
+  #pool .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+    align-items: start;
+  }
+
+  #pool .row { display: contents; }
+  #pool .row > * { width: auto; max-width: none; margin: 0; padding: 0; }
+
+  #pool .container > :first-child { grid-column: 1; grid-row: 1; }
+  #pool .row > :nth-child(2)      { grid-column: 1; grid-row: 2 / span 2; }
+  #pool .row > :nth-child(1)      { grid-column: 2; grid-row: 2; }
+  #pool .row > :nth-child(3)      { grid-column: 2; grid-row: 3; }
+}
+
+/* ==========================================================
+   SPA: same as the studio (text left, image right)
+   ========================================================== */
+#spa {
+  margin: 0 0 1.25rem 0;
+  padding: 1rem 0;
+  background-color: #eef2f6;
+  border: 1px solid #333333;
+}
+
+#spa .container {
+  max-width: none;
+}
+
+@media (min-width: 768px) {
+  #spa .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+    align-items: start;
+  }
+
+  #spa .row { display: contents; }
+  #spa .row > * { width: auto; max-width: none; margin: 0; padding: 0; }
+
+  #spa .container > :first-child { grid-column: 1; grid-row: 1; }
+  #spa .row > :nth-child(1)      { grid-column: 1; grid-row: 2; }
+  #spa .row > :nth-child(3)      { grid-column: 1; grid-row: 3; }
+  #spa .row > :nth-child(2)      { grid-column: 2; grid-row: 1 / span 3; }
+}
+
+/* ==========================================================
+   LOCKER ROOM: same as the gym (image left, text right)
+   ========================================================== */
+#locker-room {
+  margin: 0 0 1.25rem 0;
+  padding: 1rem 0;
+  background-color: #eef2f6;
+  border: 1px solid #333333;
+}
+
+#locker-room .container {
+  max-width: none;
+}
+
+@media (min-width: 768px) {
+  #locker-room .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+    align-items: start;
+  }
+
+  #locker-room .row { display: contents; }
+  #locker-room .row > * { width: auto; max-width: none; margin: 0; padding: 0; }
+
+  #locker-room .container > :first-child { grid-column: 1; grid-row: 1; }
+  #locker-room .row > :nth-child(2)      { grid-column: 1; grid-row: 2 / span 2; }
+  #locker-room .row > :nth-child(1)      { grid-column: 2; grid-row: 2; }
+  #locker-room .row > :nth-child(3)      { grid-column: 2; grid-row: 3; }
+}
+
+/* ==========================================================
+   REQUEST TOUR: centred text and button (not in the wireframe)
+   ========================================================== */
+#request-tour {
+  margin: 0 0 1.25rem 0;
+  padding: 1rem 0 2rem 0;
+  background-color: #eef2f6;
+  border: 1px solid #333333;
+  text-align: center;
+}
+
 #request-tour p {
   max-width: 50rem;
   margin-left: auto;
